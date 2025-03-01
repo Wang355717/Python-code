@@ -48,5 +48,11 @@ print(keys) # dict_keys(['name', 'age', 'address'])
 # 遍历字典
 my_dict = {"name": "python", "age": 18, "sex": "男"}
 for key in my_dict.keys():
-    print(f"字典的Key是{keys}")
+    print(f"字典的Key是{key}")
     print(f"字典的Value是{my_dict[key]}")
+    print()
+# 方式2（结果同上相同）
+for key in my_dict:
+    print(f"字典的Key是{key}")
+    print(f"字典的Value是{my_dict[key]}")
+    print()
