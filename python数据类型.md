@@ -307,6 +307,12 @@ for element in set1:
 
 ### 六、dict（字典）
 
+>1. <font color="red">每一份数据是Key和Value键值对</font>
+>2. <font color="red">可以通过Key获取到Value，Key不可以重复（重复会覆盖）</font>
+>3. 不支持下标索引
+>4. 可以修改
+>5. 支持for循环，不支持while
+
 #### 6.1、定义语法
 
 ```python
@@ -384,11 +390,21 @@ print(keys) # dict_keys(['name', 'age', 'address'])
 
 ```python
 for key in my_dict.keys():
-    print(f"字典的Key是{keys}")
+    print(f"字典的Key是{key}")
     print(f"字典的Value是{my_dict[key]}")
+    
+# 方式2（结果同上一样）
+for key in my_dict:
+    print(f"2字典的key是{key}")
+    print(f"2字典的value是{my_dict[key]}")
 ```
 
+#### 6.10、统计字典元素数量
 
+```python
+num = len(my_dict)
+print(f"字典中元素个数是{num}个")
+```
 
 
 
