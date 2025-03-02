@@ -25,3 +25,26 @@ user_info("小红", 18)
 # 不传入参数的时候使用默认值，传入参数会覆盖默认值0
 
 user_info("小红", 18, "女")
+
+# 不定长传入参数
+# 不定长定义的形式参数会作为元组存在, 接收不定长数量的参数传入
+def user_info(*args):
+    print(f"args的参数类型是{type(args)},内容是{args}")
+
+user_info("小红", 18, "女")
+
+# 关键字不定长参数
+def user_info(**kwargs):
+    print(f"kwargs的参数类型是{type(kwargs)},内容是{kwargs}")
+
+user_info(name="小红", age=18, gender="女")
+
+# 函数作为参数传人
+def test_func(compute):
+    result = compute(1, 2)
+    print(f"计算结果是{result}")
+
+def compute(x, y):
+    return x + y
+
+test_func(compute)
